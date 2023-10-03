@@ -10,7 +10,7 @@ const Footer = () => {
             <p className>Kompagnistræde 278</p>
             <p className>1265 Købehavn K</p>
         </div>
-        <div className="mt-10">
+        <div>
             <p className="text-[#FF2A70]">Opening Hours</p>
             <p className>Kompagnistræde 278</p>
             <p className>1265 Købehavn K</p>
