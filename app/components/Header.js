@@ -1,11 +1,12 @@
+import Navigation from "./Navigation";
 const Header = () => {
     return (
         <>
-        <header className="flex items-center justify-evenly">
-            <div className="flex items-center">
+        <header className="flex">
+          <div className="flex  items-center mx-auto justify-between gap-[40rem]">
         <img src="/assets/Logo.png" alt="" />
-    </div>
-
+<Navigation/>
+</div>
     </header>
    
         </>
