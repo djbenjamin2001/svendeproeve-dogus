@@ -15,6 +15,13 @@ const LoginPage = () => {
       .required("Password is required."),
   });
   return (<main >
+        <section className="relative flex justify-center items-center" >
+      <img className="opacity-25 h-[272px] w-full" src="/assets/bg/footerbg.jpg" alt="" />
+      <div className="absolute text-center ">
+      <h1 className=" m-auto text-2xl">LOGIN</h1>
+      <img src="/assets/bottom_line2.png" alt="" />
+      </div>
+     </section>
 <article className="relative text-center py-5  bg-[url('/assets/bg/pattern_bg.jpg')]">
     <h1 className="text-2xl">NIGHTCLUB IS MEMBERS ONLY</h1>
     <p>Please provide email and password to log in</p>
