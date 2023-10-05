@@ -17,6 +17,7 @@ const Eventslider = async () => {
         <img src="/assets/bg/slider_bg_overlay.png" alt="" />
        
     <div className=" max-w-4xl mx-auto absolute text-center"> 
+     
     <h1 className="text-semibold text-xl">EVENTS OF THE MONTH</h1>
       <div className="swiper-pagination"></div>
       <Swiper
