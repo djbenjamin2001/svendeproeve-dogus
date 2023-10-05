@@ -1,9 +1,10 @@
 import Image from 'next/image'
-
+import Eventslider from './components/Eventslider'
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-   
+    <main className="">
+      <h1>hello</h1>
+   <Eventslider/>
     </main>
   )
 }

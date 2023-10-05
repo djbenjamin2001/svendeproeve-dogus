@@ -1,0 +1,15 @@
+.swiper-button-next, .swiper-button-prev{
+    color: orange;
+}
+
+
+.swiper-button-prev{
+    left: -2rem;
+}
+.swiper-button-next{
+    right: -2rem;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+bottom: -2rem;
+}
