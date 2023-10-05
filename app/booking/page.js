@@ -1,7 +1,7 @@
 "use client";
 import { Formik } from "formik";
 import { useRouter } from "next/navigation";
-import { setCookie, getCookie } from "cookies-next";
+import { getCookie } from "cookies-next";
 import BookingForm from "./BookingForm";
 import Link from "next/link";
 import * as Yup from "yup";
@@ -19,7 +19,7 @@ const Bookingtable = () => {
 
 
   const token = getCookie("token")
-  const userId = getCookie("userId")
+  const userId = parseInt(getCookie("userId"))
   console.log(userId)
   console.log(token)
   return (
@@ -54,7 +54,7 @@ const Bookingtable = () => {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${token}`
              },
-              body: JSON.stringify(values, {
+              body: JSON.stringify({
                 userId: userId, 
                 name:values.name,
                 email:values.email,
