@@ -1,5 +1,6 @@
 import { cookies } from "next/headers";
 import { revalidatePath } from 'next/cache'
+
 const getData = async () => {
     let token = cookies().get("token");
 let userId = cookies().get("userId")
@@ -14,9 +15,9 @@ console.log(userId)
 
 const ReservationsPage = async() => {
     const reserved = await getData()
+
     console.log(reserved) 
     const deleteData = async(formdata) =>{
-        
         "use server"
         let token = cookies().get("token");
         let myData = Object.fromEntries(formdata)
