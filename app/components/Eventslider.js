@@ -22,7 +22,7 @@ const Eventslider = () => {
   }, []);
 
   return (
-    <section className="relative flex justify-center items-center">
+    <section id="event-slider" className="relative flex justify-center items-center">
       <img src="/assets/bg/slider_bg_overlay.png" alt="" />
 
       <div className="max-w-4xl mx-auto absolute text-center">

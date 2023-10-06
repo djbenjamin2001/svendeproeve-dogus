@@ -1,6 +1,7 @@
 "use client"
 import Eventslider from "./components/Eventslider";
 import Section1 from "./components/Section1";
+import Subscribe from "./components/Newsletter";
 import { useState, useEffect } from "react";
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -38,6 +39,9 @@ export default function Home() {
  
       <Section1/>
       <Eventslider/>
+    
+      <Subscribe/> 
+      
     </main>
   );
 }
