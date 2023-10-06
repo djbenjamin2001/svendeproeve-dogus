@@ -27,7 +27,6 @@ export default function Home() {
             className="animate-flip-down  animate-delay-100"
             src="/assets/Logo-1.png"
             alt=""
-            loading="eager"
           
           />
           <p className="animate-flip-up animate-duration-1000 animate-delay-500 animate-ease-in-out text-5xl">HAVE A GOOD TIME</p>
@@ -35,7 +34,7 @@ export default function Home() {
         </div>
       </section>
     }
-      
+      <Eventslider/>
     </main>
   );
 }
