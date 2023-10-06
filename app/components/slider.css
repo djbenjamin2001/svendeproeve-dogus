@@ -13,4 +13,12 @@
 
 .swiper-pagination-bullets.swiper-pagination-horizontal{
 bottom: -2rem;
+
+}
+.swiper-pagination-bullet-active {
+    background-color: hotpink !important;
+}
+.swiper-pagination-bullet {
+    background-color: white;
+    opacity: 100%;
 }

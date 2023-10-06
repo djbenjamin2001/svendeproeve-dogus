@@ -17,8 +17,8 @@ const Navigation = () => {
     router.push("login");
   };
     return ( 
-        <nav className="text-lg space-x-4">
-        <Link  href="/">Home</Link> &nbsp;
+        <nav className="text-lg space-x-4 ">
+        <Link className=""  href="/">Home</Link> &nbsp;
         <Link  href="/blog">Blog</Link>&nbsp;
         <Link   href="/booking">Book Table</Link>&nbsp;
         <Link   href="/contact">Contact us</Link>&nbsp;

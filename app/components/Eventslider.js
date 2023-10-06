@@ -1,6 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay, Keyboard } from "swiper/modules";
+import {Pagination, Autoplay, Keyboard } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -17,8 +17,13 @@ const Eventslider = async () => {
         <img src="/assets/bg/slider_bg_overlay.png" alt="" />
        
     <div className=" max-w-4xl mx-auto absolute text-center"> 
+   
      
-    <h1 className="text-semibold text-xl">EVENTS OF THE MONTH</h1>
+   
+      <h1 className=" m-auto text-2xl">EVENTS OF THE MONTH US</h1>
+
+
+  
       <div className="swiper-pagination"></div>
       <Swiper
         slidesPerView={2}
@@ -29,7 +34,7 @@ const Eventslider = async () => {
         modules={[Keyboard, Pagination, Autoplay]}
         pagination={{ el: ".swiper-pagination", clickable: true }}
         loop={true}
-        autoplay={false}
+        autoplay={true}
       >
            <section className="max-w-4xl pb-5  gap-[2rem] grid grid-cols-3 mx-auto text-center">
           {events.map((Events) => (
