@@ -10,7 +10,11 @@ console.log(userId)
           Authorization: `Bearer ${token.value}`,
         }}
     );
+    if (!res.ok) {
+      return null
+    } else {
     return await res.json();
+    } 
   };
 
 const ReservationsPage = async() => {
@@ -28,7 +32,7 @@ const ReservationsPage = async() => {
             Authorization: `Bearer ${token.value}`,
           }
     })
-    if(!res.ok) revalidatePath("/reservations")
+    if(res.ok) revalidatePath("/reservations")
       }
 
     return ( 
@@ -40,22 +44,23 @@ const ReservationsPage = async() => {
       <img src="/assets/bottom_line2.png" alt="" />
       </div>
      </section>
-{!reserved.length ? (
-        <p>no Reservations found</p>
+{reserved  ? (
+   reserved.map((statement) => <form className="relative text-center   bg-[url('/assets/bg/pattern_bg.jpg')]" action={deleteData}> 
+   <input type="hidden" name="deleteId" value={statement.id} />
+   <div className="text-center py-[5rem] text-xl  font-bold ">
+     <p>{statement.name}</p> &nbsp;
+     <div className="flex justify-center gap-4  hover:text-pink-500 transition duration-500  delay-500">
+     <p>number of guests:{statement.guests}</p> &nbsp;
+     <p> ordered table:{statement.table}</p> &nbsp;
+     <p>reserved date:{statement.date}</p> &nbsp;
+    <button className="text-white hover:text-pink-500 transition duration-500  delay-500" type="submit">remove reservation</button>
+    </div>
+    </div>
+   </form>
+   )
+       
       ) : ( 
-        reserved.map((statement) => <form className="relative text-center   bg-[url('/assets/bg/pattern_bg.jpg')]" action={deleteData}> 
-        <input type="hidden" name="deleteId" value={statement.id} />
-        <div className="text-center py-[5rem] text-xl  font-bold ">
-          <p>{statement.name}</p> &nbsp;
-          <div className="flex justify-center gap-4  hover:text-pink-500 transition duration-500  delay-500">
-          <p>number of guests:{statement.guests}</p> &nbsp;
-          <p> ordered table:{statement.table}</p> &nbsp;
-          <p>reserved date:{statement.date}</p> &nbsp;
-         <button className="text-white hover:text-pink-500 transition duration-500  delay-500" type="submit">remove reservation</button>
-         </div>
-         </div>
-        </form>
-        )
+        <p>no Reservations found</p>
         
       )}
         </>
