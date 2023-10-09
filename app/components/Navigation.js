@@ -17,16 +17,17 @@ const Navigation = () => {
     router.push("login");
   };
     return ( 
-        <nav className="text-lg space-x-4">
-        <Link  href="/">Home</Link> &nbsp;
-        <Link  href="/blog">Blog</Link>&nbsp;
-        <Link   href="/booking">Book Table</Link>
-        {token && <Link href="reservations">My bookings</Link>}&nbsp;
-        <Link   href="/contact">Contact us</Link>&nbsp;
+
+        <nav className="text-lg space-x-4  ">
+        <Link className="  hover:text-pink-500 duration-500 delay-150"  href="/">Home</Link> &nbsp;
+        <Link className="  hover:text-pink-500 duration-500 delay-150"  href="/blog">Blog</Link>&nbsp;
+        <Link className="  hover:text-pink-500 duration-500 delay-150"   href="/booking">Book Table</Link>&nbsp;
+        {token && <Link className="  hover:text-pink-500 duration-500 delay-150" href="reservations">My bookings</Link>}&nbsp;
+        <Link className="  hover:text-pink-500 duration-500 delay-150"   href="/contact">Contact us</Link>&nbsp;
         {token ? (
         <button onClick={handleLogout}>logout</button>
       ) : (
-        <Link href="login">Login</Link>
+        <Link className="  hover:text-pink-500 duration-500 delay-150"  href="login">Login</Link>
       )}
     
        </nav>

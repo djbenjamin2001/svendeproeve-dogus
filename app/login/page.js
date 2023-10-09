@@ -14,7 +14,7 @@ const LoginPage = () => {
       .min(6, "Password is too short")
       .required("Password is required."),
   });
-  return (<main >
+  return (<main>
         <section className="relative flex justify-center items-center" >
       <img className="opacity-25 h-[272px] w-full" src="/assets/bg/footerbg.jpg" alt="" />
       <div className="absolute text-center ">
