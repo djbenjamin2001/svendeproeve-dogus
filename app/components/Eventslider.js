@@ -42,7 +42,7 @@ const Eventslider = () => {
           <section className="max-w-4xl pb-5 gap-[2rem] grid grid-cols-3 mx-auto text-center">
             {events.map((event) => (
               <SwiperSlide>
-               <article className="relative">
+               <article className="relative bg-pink-500">
   <div className="group">
     <img className="w-[467px] h-[267px]" src={event.asset.url} alt="" />
     <section className="absolute flex flex-col justify-center items-center bg-black border inset-0 bg-opacity-0 group-hover:bg-opacity-70 duration-500 delay-500">
@@ -63,6 +63,10 @@ const Eventslider = () => {
         </div>
       </div>
     </section>
+  </div>
+  <div className="flex justify-evenly">
+  <p>{event.location}</p>
+  <p>{event.date}</p>
   </div>
 </article>
               
