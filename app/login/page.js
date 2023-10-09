@@ -52,6 +52,10 @@ const LoginPage = () => {
               sameSite: "lax",
               maxAge: 3600,
             });
+            setCookie("userId", data.user.id, {
+              sameSite:"lax",
+              maxAge:3600,
+            })
             router.push("/");
           });
       }}

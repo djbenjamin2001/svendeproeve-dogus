@@ -17,6 +17,7 @@ const Navigation = () => {
     router.push("login");
   };
     return ( 
+
         <nav className="text-lg space-x-4  ">
         <Link className="  hover:text-pink-500 duration-500 delay-150"  href="/">Home</Link> &nbsp;
         <Link className="  hover:text-pink-500 duration-500 delay-150"  href="/blog">Blog</Link>&nbsp;

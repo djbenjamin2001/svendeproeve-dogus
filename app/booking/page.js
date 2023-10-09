@@ -1,7 +1,7 @@
 "use client";
 import { Formik } from "formik";
 import { useRouter } from "next/navigation";
-import { setCookie, getCookie } from "cookies-next";
+import { getCookie } from "cookies-next";
 import BookingForm from "./BookingForm";
 import Link from "next/link";
 import * as Yup from "yup";
@@ -17,8 +17,10 @@ const Bookingtable = () => {
    
   });
 
-  const isLoggedIn = !!getCookie("token");
-  const token = getCookie("token", "value")
+
+  const token = getCookie("token")
+  const userId = parseInt(getCookie("userId"))
+  console.log(userId)
   console.log(token)
   return (
     <main>
@@ -48,11 +50,19 @@ const Bookingtable = () => {
           onSubmit={(values, { setStatus, setSubmitting }) => {
             fetch("http://localhost:4000/reservations", {
               method: "POST",
-              headers: {
+             headers:{
                 "Content-Type": "application/json",
-                "Authorization":` Bearer ${token}`,
-              },
-              body: JSON.stringify(values),
+                Authorization: `Bearer ${token}`
+             },
+              body: JSON.stringify({
+                userId: userId, 
+                name:values.name,
+                email:values.email,
+                phone:values.phone,
+                guests:values.guests,
+                table:values.table,
+                date:values.date
+              }),
             })
               .then((res) => {
                 if (!res.ok) {
@@ -61,11 +71,10 @@ const Bookingtable = () => {
                 } else {
                   return res.json();
                 } 
-                 router.push("/");
               }) 
           }}
         >
-          {isLoggedIn ? (
+          {token ? (
           ({status}) =>(
             <BookingForm status={status}/>
             

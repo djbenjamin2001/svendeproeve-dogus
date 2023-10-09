@@ -166,7 +166,7 @@ const BookingForm = () => {
         placeholder="Phone number"
       />
      </div> 
-      <button>SEND</button>
+      <button type="submit">SEND</button>
     </Form>
   );
 };
