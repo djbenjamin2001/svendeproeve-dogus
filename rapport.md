@@ -1,8 +1,6 @@
 # Svendeprøve – Dogus Benjamin Batbayli
 
-
 ## Indholdsfortegnelse
-
 - [Tech Stack](#tech-stack)
 - [Overvejelser og Valg](#overvejelser-og-valg)
 - [Arbejdsgang](#arbejdsgang)
@@ -10,90 +8,48 @@
 - [Kodeeksempler](#kodeeksempler)
 
 # Tech Stack
-
 Til min svendeprøve har jeg valgt følgende stack:
 - [Nextjs](#nextjs)
-- [swiper](#swiper)
-- [Framer Motion](#framer-motion)
-- [cookies-next](#lucide-icons)
-- [TailwindCSS](#tailwindcss)
 - [Formik](#formik)
 - [Yup](#yup)
+- [cookies-next](#cookies-next)
+- [TailwindCSS](#tailwindcss)
+- [Swiper](#swiper)
 
 
-## React
+## Nextjs
+Next er en populer framework der er baseret på react biblioteken der bliver brugt til at skabe full stack webapplikationer, selvom nextjs er baseret på react biblioteket er nextjs designet til at opbygge hurtige og moderne hjemmesider eller applikation der bliveret generet med serverside rendering, men den kan også lave normal statisk data ved hjælp af "use client" som giver os mulighed får at bruge npm pakker der typisk kun vil virke via client siden som formik osv, oven i det har nextjs også en nemere tid med routes, da dens routing er dynamisk og mappe baseret.
 
-React er et bibliotek, skabt til at lave SPA's. React giver en redskaber som hooks (`useState`, `useEffect` mm.) og komponenter. React giver en masse fleksibilitet, da det er unopininated.  
-React har et stort community og gode docs, som gør det nemt at finde hjælp, når der opstår problemer, hvilket også er grunden til at jeg har valgt React over fx **Vue**, da min oplevelse med Vue, er at det er et forholdsvist nyt framework, og endnu ikke har et så stort community endnu. Det gør det svært at finde hjælp hvis man sidder fast.
-
-## Axios
-
-Axios er et lille bibliotek, der gør fetch-kald meget nemmere. Axios klarer gentagne ting for dig automatisk, så man skal ikke tænke på fx JSON eller backwards compatibility, hvilket er derfor jeg valgte at bruge Axios i stedet for at skrive mine fetch-kald selv. Jeg har brugt Axios meget før og deres docs er gode til at finde hjælp.
-
-## Framer Motion
-
-Framer Motion er et animations-bibliotek til React, det gør det nemt at animere elementer. Du kan lave helt simple animationer som du ville i CSS, men du kan også animere mere avancerede ting, som fx når et element bliver fjernet fra DOM'en.  
-Jeg har valgt at bruge Framer Motion over andre animations-biblioteker som React Spring, da den kommer med det hele inkluderet og har indbygget gesture support, hvilket kræver ekstra pakker i React Spring. Selvom Framer Motions docs er langt fra er perfekte, er det stadig bedre end alternativerne og deres community er stort, så man kan altid få hjælp.
-
-## Lucide Icons
-
-Lucide Icons er en fork af Feather Icons så samlingen af ikoner er udvidet til ca. 800 ikoner. Da mock-uppen brugte Feather Icons gav det mening at bruge Lucide Icons, da jeg så nemt kunne tilføje mine egner ikoner, der matchede designet, til fx fejlbeskeder.
-
-## TailwindCSS
-
-TailwindCSS er et utility-first CSS framework, der gør det hurtigt og nemt at style ens komponenter og sørger samtidigt for at man får et overordnet og ensartet udtryk.  
-I stedet for at skrive normal CSS kan man give ens elementer klasser som: `flex` for at give den `display: flex`.  
-TailwindCSS giver en masse fleksibilitet og sørger samtidigt for at tilsætte prefixes hvor der er behov, så man ikke skal bekymre sig om cross browser support.  
-Jeg valgte TailwindCSS over andre CSS frameworks, som **Bootstrap**, fordi det er så customizable. Du føler du skriver CSS, bare hurtigere, hvor Bootstrap og andre CSS frameworks typisk har en bestemt måde de gerne selv vil have det skal se ud. Derudover har TailwindCSS rigtig gode docs og et voksende community.
-
-## React Router Dom
-
-React Router Dom er et bibliotek til at navigere i din SPA. Pakken giver dig mange hooks , der hjælper dig til at navigere rundt i appen, fx med `<Link>`-komponentet eller `useNavigate`-hooket.  
-Jeg har valgt at bruge React Router Dom fordi det er pakke med meget "erfaring" og den bliver stadig vedligeholdt og får regelmæssige opdateringer, samtidigt med den gør det nemt at opsætte ens navigation og kommer med alle de ting man har brug for mht. navigation i din SPA.
-
-## Formik
-
-Formik er et bibliotek der gør det nemmere at lave forme i React, den tager hånd om alle værdier og fejl for en. Formik er meget fleksibelt og man kan nemt lave sin form som man gerne selv vil have den og få den til at se ud som man ønsker.  
-Jeg valgte at bruge Formik over fx React Hook Forms, pga. dens gode integration med [Yup](#yup) som gør det meget nemt at validere ens form. Derudover er Formik nemt at komme i gang med samtidigt med den giver dig alt det du har behov for. Formik har også rigtig gode docs.
+## formik
+Formik er en af verdnens mest populær open source formular bibliotek, som giver dig en intuitiv og simpel Formular der kan blive brugt til at skabe forskellige formularer som man kan have nytte af(fx hvis man skulle til at lave en registrering formular), med dette npm pakke har man oveni en nemmere og meget mere clusterfree kodning oplevelse når skal til at opbygge selve formularen til de forskellige sider der har brug for det.
 
 ## Yup
+Yup er et validerings schema-bibliotek, som jeg brugte til at validere form med ved at lave schemas for mine inputs, der er selvfølig andre validations biblioteker jeg kunne have brugt til at validere med som zod, men da yup har en bedre og nemere intergration med formik brugte jeg den istedet.
 
-Yup er et validerings schema-bibliotek, der gør det nemt at validere din form ved at opsætte schemas for dine inputs.  
-Jeg har valgt Yup over andre biblioteker, da Yup har en fremragende integration med Formik, der gør det meget nemt at komme i gang med. Desuden har Yup gode docs.
+## cookies-next
+Cookies-next er en client based nextjs npm pakke der giver dig muligheden for at skabe, indlæse og slætte de småkager du har sættet ind i cookies under din applikation hvis du fx bruger chrome, Cookies-next bliver brugt i sammentid med Formik i denne projekt da det hjælper med at indlæse, skabe og endnu engang slette dine cookies du har, nogle eksempler vil være i register siden fx hvor vi skaber cookies der indeholder vores data som vil blive brugt til at logge ind senere og sætter den inde i apiet via en POST request.
+Der er derimod også mulighed for at bruge nextJs eget dedikeret cookies, men da den kun kan blive eksikveret i serversiden, besluttede jeg mig kun at bruge den til en side, da alle de andre sider havde brug for cookies-next da de bruger client-side rendering.
 
-## react-use
+## TailwindCSS
+TailwindCSS er et utility-first CSS framework og en af kode verdnens mæst populereste css frameworks, som gøre næmt og hurtigt at style på mine komponenter ved at style direkte på dem ved at lave en classname inde i de tags men forksellige komponenter har, og det viser hvor fleksibelt tailwind css er i dele hele taget, fordi når jeg bruger tailwind css har jeg en følelse af at jeg skriver css bare på en meget hurtigere og simplere måde der gøre css nemmere at forstå, der er jo så andre css frameworks jeg kunne have brugt som **Foundation** men jeg besluttede mig for at bruge tailwind istedet da de andre frameworks har en bestemt måde de gerne vil styles på, imens tailwind er customizeable og fleksibel til brugerens behov.
+Endnu en af Tailwinds positiveter som der gjørde den endnu bedre at bruge er at den har massere extension/plugins man kan bruge, i min tilfælde besluttede jeg mig for at installere tailwind animated, som jeg brugte til at animere siden med da det var en vigtig del af opgaven, tailwind animated giver en premade animationer med forskælige niveur af komplexitet som man kan bruge til at opbygge animeret hjemmesider hvor man oveni animationerne stadigvæk kan skrive sin tilgendlige css properties ind så det passer til ens side.
 
-react-use er et hook-bibliotek, der giver dig mange brugbare hooks til din app. Eksempler fra min prøve er fx `useEffectOnce` der fungerer som en useEffect, men den bliver kun kørt ved første render. Andre eksempler man kunne bruge er fx `useDropArea` og `useCopyToClipboard`.  
-Jeg har valgt react-use over andre hook-biblioteker fordi det er det bibliotek med flest hooks og den havde de hooks jeg skulle bruge.
+## Swiper
+Swiper er en moderne gratis opensource billed slider som bliver brugt i hjemmesider der har behov for billed slideshows og for at skabe dem, da det er en npm pakke der bliver installeret og brugt til at opbygge slidersne. 
+swiper har mange positiviter der gøre den meget næm at bruge til hvis man skal opbygge en slider som dens responsiveness og modules der giver dig mulighed til at customize din slider lige på den måde du har løst til.
 
-Selvom react-use har en `useCookie`-hook, har jeg dog valgt at bruge **`react-use-cookie`**, da den tilføjer muligheden for en default value og har bedre håndtering af cookien.
+#  Argumentation for de valg du selvstændigt har truffet under løsningen af opgaven
+under min kodning process har der ikke veret så mange undervejelser i løbet af de 5 fem dage til at kode i, der var derimod nogle få undervejelser jeg ændte med at truffe som jeg er tilfræds med, fx jeg har lavet selve headeren statisk da jeg helere gerne ville have at den blev stående over det hele istedet for at den blev stående alle de andre sider lige undtagen forsiden hvor det var den skulle have noget animation hvor det var at den kom up lige så snart at man scrollede ned, endnu en valg jeg endte med at beslutte mig over var at have mere fokus på de sider der havde brug for funktionaliteter der interager med selve api'et istedet for at have fokus på animationer som man så kan se på selve siden, det gøre jo så at der ikke er så meget animation at se lige så snart man er inde i selve siden , men derimod er der massere funktionaliteter at arbejde og lege med  når man er inde i selve siden. 
 
-# Overvejelser og Valg
-
-## Ændringer fra designet
-
-- Tilføjede minimal hvid baggrund til "Landrup" på **Velkomst**-siden for at forbedre readability.
-- Jeg har gjort navnet på en aktivitet i listevisning større, så de er mere scanbare.
-- Hvis brugeren ikke er logget ind, men kommer ind på en aktivitet, vises knappen "Tilmeld" stadig, så brugeren kan forblive i flowet og ikke skal ud og lede efter log ind et andet sted.
-- Hvis brugeren ikke er indenfor aldersgrænsen til en aktivitet, vil knappen minde dem om det og blive deaktiveret, så de ikke kan melde sig på.
-- Hvis en instruktør går ind på sin egen aktivitet, bliver det vist og de får ikke mulighed for at melde sig på holdet.
-- På **Kalender**-siden har hvert item i listen mindre padding og en mindre overskrift, dette giver mere plads og forbedrer scanbarheden.
-- Overskrifter på hver side har fået fed skrift, så det er nemt at se hvilken side man er på. Skaber visuelt hieraki.
-- Margener er blevet gjort ens, så siderne får rene linjer.
-- I stedet for at alle links i draweren har en rund outline, har jeg valgt at det kun er den aktive side, der har en outline. Dette giver klarhed for brugeren over hvilken side de er på.
-- Designet bruger to shades af en næsten ens grå. Jeg har valgt at gå med den grå farve fra style-guiden til det hele, da det kan skabe forvirring at have to grå farver der er så ens i designet.
-- Holdoversigt har fået mere space, jeg har givet navnene på deltagerne et større gap, så vi udnytter pladsen vi har, og samtidigt bliver listen mere scanbar.
+Udover det har jeg så brugt pakker som jeg  har bekendtskab til som gjøre det meget næmt at få løst opgaven på en effektiv og hurtig måde der gav mig en funktionel og fin hjemmeside
 
 ## Tilføjelser
 
-- Hvis en bruger ikke er logget ind og går ind på kalender-visningen, vil de blive mindet om at de skal være logget ind for at kunne se deres kalender. Derudover har jeg tilføjet en log ind knap så brugeren nemt kan logge ind. Der er ikke nogen log ind-knap i designet, så derfor har jeg tilføjet knappen.
+- Hvis en bruger ikke er logget ind og prøver at gå ind i reservations vil man blive redirected til en side der vil bede dig om at logge ind før du går ind i reservations
 - Jeg har tilføjet en "Opret profil" mulighed for at tillade nye brugere. Jeg tænker det giver mening at en bruger har mulighed for at oprette en profil hvis de ikke allerede har en.
 - Jeg har tilføjet små detaljer som en 404-side, info-beskeder hvis der er tomme sider (fx hvis man ikke har søgt på noget endnu på Søg-siden)
 - Jeg har tilføjet en "Tilbage"-knap til aktivitets-detaljer-siden og på holdoversigt-siden, så brugeren nemt kan gå tilbage til den side de kom fra.
 
-## Animationer
-
-Jeg har brugt animationer mange steder i appen for at understøtte designet og for at skabe fokus om det vigtigste. Jeg har brugt animationer for at give brugeren feedback, fx når de klikker på knapper eller lign. Jeg har generelt haft som mål at holde animationerne naturlige, så ikke de virker overvældende for brugeren og tager for meget fokus.
 
 # Arbejdsgang
 
@@ -162,51 +118,5 @@ export default function AuthProvider({ children }) {
 			</RememberMeContext.Provider>
 		</AuthContext.Provider>
 	)
-}
-```
-
-## Filter funktion
-
-Dette er funktionen jeg bruger til at filtrere aktiviteter, når man bruger søgefunktionen. Denne funktion vil jeg gerne forklare mere om til prøven.
-
-```js
-function filterClasses() {
-	if (!filter || filter === '') return data
-	if (!data || Object.keys(data).length < 1) return data
-
-	const importance = {
-		name: 3,
-		description: 2,
-		weekday: 1,
-		time: 1,
-		age: 2,
-	}
-
-	const filtered = data?.filter(item => {
-		let score = 0
-		Object.keys(importance).forEach(key => {
-			if (key === 'time') {
-				if (
-					item.time.includes(filter) ||
-					item.time.replace(':', '.').includes(filter) ||
-					item.time.replace(':', '').includes(filter)
-				) {
-					score += importance[key]
-				}
-			} else if (key === 'age') {
-				if (parseInt(filter) >= item.minAge && parseInt(filter) <= item.maxAge)
-					score += importance[key]
-			} else {
-				if (item[key].toLowerCase().includes(filter)) {
-					score += importance[key]
-				}
-			}
-		})
-		return score > 0
-	})
-
-	const sorted = filtered.sort((a, b) => a - b)
-
-	return sorted
 }
 ```
