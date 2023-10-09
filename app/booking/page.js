@@ -44,6 +44,7 @@ const Bookingtable = () => {
             guests: "",
             phone: "",
             date: "",
+            textarea: "",
            
           }}
           validationSchema={loginSchema}
@@ -61,7 +62,8 @@ const Bookingtable = () => {
                 phone:values.phone,
                 guests:values.guests,
                 table:values.table,
-                date:values.date
+                date:values.date,
+                textarea:values.textarea
               }),
             })
               .then((res) => {
@@ -71,7 +73,9 @@ const Bookingtable = () => {
                 } else {
                   return res.json();
                 } 
+               
               }) 
+               router.push("/takforbooking")
           }}
         >
           {token ? (

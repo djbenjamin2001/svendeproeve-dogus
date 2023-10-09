@@ -127,7 +127,8 @@ const BookingForm = () => {
           </div>
         </article>
       </section>
-      <div className="flex gap-4">
+      <section className="flex flex-col gap-4">
+      <div className=" flex gap-4">
       <Field
         className="border p-3 border-white bg-transparent"
         name="email"
@@ -157,16 +158,26 @@ const BookingForm = () => {
         placeholder="number of guests"
       />
 </div>
-  <div className="flex justify-evenly ">
-      <Field className="border p-3  border-white bg-transparent" name="date" type="date" />
+  <div className="flex justify-between gap-4 ">
+      <Field className="border p-3   border-white bg-transparent" name="date" type="date" />
       <Field
-        className="border border-white bg-transparent"
+        className="border p-3    border-white bg-transparent"
         name="phone"
         type="number"
         placeholder="Phone number"
       />
-     </div> 
-      <button type="submit">SEND</button>
+    
+     </div>   
+     </section>
+     <Field
+          className="border border-white bg-transparent p-3"
+          name="textarea"
+          type="text"
+          as="textarea"
+        />
+     <div className="flex justify-end pb-5">
+        <button type="submit" className="border w-[10rem] border-l-0 border-r-0 border-white p-2">reserve</button>
+        </div>
     </Form>
   );
 };
