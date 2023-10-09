@@ -1,4 +1,17 @@
-# Svendeprøve – Dogus Benjamin Batbayli
+# NightClub Svendeprøve – Dogus Benjamin Batbayli
+
+#####  WU08
+
+##### Uddannelse: Webudvikler
+
+##### Uddannelsessted: Roskilde Tekniske Skole
+
+##### email til login: benjaminbatbayli@gmail.com
+
+##### password til login: 123456
+
+##### projekt url: https://github.com/rts-cmk-wu08/night-club-svendeproeve-djbenjamin2001
+
 
 ## Indholdsfortegnelse
 - [Tech Stack](#tech-stack)
@@ -39,84 +52,75 @@ Swiper er en moderne gratis opensource billed slider som bliver brugt i hjemmesi
 swiper har mange positiviter der gøre den meget næm at bruge til hvis man skal opbygge en slider som dens responsiveness og modules der giver dig mulighed til at customize din slider lige på den måde du har løst til.
 
 #  Argumentation for de valg du selvstændigt har truffet under løsningen af opgaven
-under min kodning process har der ikke veret så mange undervejelser i løbet af de 5 fem dage til at kode i, der var derimod nogle få undervejelser jeg ændte med at truffe som jeg er tilfræds med, fx jeg har lavet selve headeren statisk da jeg helere gerne ville have at den blev stående over det hele istedet for at den blev stående alle de andre sider lige undtagen forsiden hvor det var den skulle have noget animation hvor det var at den kom up lige så snart at man scrollede ned, endnu en valg jeg endte med at beslutte mig over var at have mere fokus på de sider der havde brug for funktionaliteter der interager med selve api'et istedet for at have fokus på animationer som man så kan se på selve siden, det gøre jo så at der ikke er så meget animation at se lige så snart man er inde i selve siden , men derimod er der massere funktionaliteter at arbejde og lege med  når man er inde i selve siden. 
+under min kodning process har der ikke veret så mange undervejelser i løbet af de 5 fem dage til at kode i, der var derimod nogle få undervejelser jeg ændte med at træffe som jeg er tilfræds med, fx jeg har lavet selve headeren statisk da jeg helere gerne ville have at den blev stående over det hele istedet for at den blev stående alle de andre sider lige undtagen forsiden hvor det var den skulle have noget animation hvor det var at den kom up lige så snart at man scrollede ned.
 
-Udover det har jeg så brugt pakker som jeg  har bekendtskab til som gjøre det meget næmt at få løst opgaven på en effektiv og hurtig måde der gav mig en funktionel og fin hjemmeside
+Endnu en valg jeg endte med at beslutte mig over for var at have mere fokus på de sider der havde brug for funktionaliteter der interager med selve api'et istedet for at have fokus på animationer som man så kan se på selve siden, det gøre jo så at der ikke er så meget animation at se lige så snart man er inde i selve siden , men derimod er der massere funktionaliteter at arbejde og lege med  når man er inde i selve siden.
+
+Udover det har jeg så brugt pakker som jeg  har bekendtskab til som gjøre det meget næmt at få løst opgaven på en effektiv og hurtig måde der gav mig en funktionel og fin hjemmeside jeg har kunne arbejde med.
 
 ## Tilføjelser
 
-- Hvis en bruger ikke er logget ind og prøver at gå ind i reservations vil man blive redirected til en side der vil bede dig om at logge ind før du går ind i reservations
-- Jeg har tilføjet en "Opret profil" mulighed for at tillade nye brugere. Jeg tænker det giver mening at en bruger har mulighed for at oprette en profil hvis de ikke allerede har en.
-- Jeg har tilføjet små detaljer som en 404-side, info-beskeder hvis der er tomme sider (fx hvis man ikke har søgt på noget endnu på Søg-siden)
-- Jeg har tilføjet en "Tilbage"-knap til aktivitets-detaljer-siden og på holdoversigt-siden, så brugeren nemt kan gå tilbage til den side de kom fra.
+- Hvis en bruger ikke er logget ind og prøver at gå ind i reservations vil man blive redirected til login siden der gøre at lige så snart du er logget ind så vil linken til reservations vise frem i navigationen
+- Jeg har tilføjet en tak for din tilmælding og tak for din booking side som man bliver direkte sendt videre til lige så snart man booker og tilmelder sig nyheds brevet
 
 
 # Arbejdsgang
 
-Jeg har arbejdet hårdt hele ugen og har været fuldt fokuseret på opgaven. Første dag brugte jeg meget tid på at opsætte min [projektstyring](https://github.com/orgs/rts-cmk-wu07/projects/19/views/1) og det har hjulpet mig med at prioritere senere på ugen.  
-Jeg prøvede at prioritere min tid, så jeg fulgte en brugers flow i appen. Derfor startede jeg fx med at lave en velkomst-side, bagefter gik jeg til aktivitetssiden osv.
+I løbet af de fem dage vi fik til at arbejde har jeg arbejdet og knoklet hårdt med at få funktionerne til at virke sammen med de npm pakker jeg installerede, og heldigvis kom det hele til at køre, selvom jeg fik alle de funktionelle sider til at køre optimalt nåede jeg ikke fuldkommen at lave alle de animationer der skulle laves på forsiden, men det var ikke så vigtigt da jeg helere ville få booking siden og reservation siden til at køre optimalt og det gøre det heldigvis.
+der var også nogle få dele af de funktionelle sider hvor jeg blev nåd til at sidde ned og analysere tidligere projekter som jeg arbejdede med for at kunne få de små road bumps mine funktionaliteter havde væk.
 
-# Fremtidens Landrup Dans
+Så alt i alt det der gik godt var: sider på hjemmesiden der havde brug for at få sendt data ind i databasen, og få det vist frem på selve siden, siderne der havde brug for nogle funktionalitet så det kunne køre uden fejl, 
+hvad der gik skidt: mangel af massere animarede underpunkter i forsiden.
 
-I fremtiden kan Landrup Dans udvide med nye funktioner til deres app. Man kunne fx tilføje muligheden for at filtrere aktiviteter efter aldersgrænse og type.  
-Man kunne også integrere sociale features så man kan følge hinanden og se hvilke aktiviteter man går til.
+# Fremtidens Benjamin
+I fremtiden vil jeg jeg udvide sider som disse med flere funktioner og animationer så det både virker optimalt og funktionelt.
+jo mere kodningverdnen udvikler sig og giver nye frameworks, pakker og løsninger ville jeg kunne bruge dem til at opbygge sider der mindes eller ses bedre ud om denne her jeg har lavet nu.
 
-Når Landrup dans vokser sig større og får flere brugere er det også vigtigt at sørge for at siden kører problemfrit. Det er fx vigtigt at hjemmesiden ligger på forskellige servere så den kan håndtere mange brugere samtidigt. Det kan fx være ved at opgradere til et højere plan på Netlify, der giver mulighed for det.
+# Kodeeksempl
 
-# Kodeeksempler
-
-## Auth
-
-Dette er min auth context. Der sker lidt forskellige ting i dette stykke. Fordi brugeren kan vælge at blive husket, tjekker jeg både efter en key i mine cookies og i sessionStorage. Jeg bruger så en `useEffectOnce` fra react-use for at sætte min context til enten min cookie eller "session".
-
-I min useEffect tjekker jeg at hvis min context ændrer sig skal den opdatere min cookie eller sessionstorage. Dette sikrer at jeg altid har den helt opdaterede auth i min cookie eller sessionstorage. Hvis jeg til gengæld sætter min auth context til at have en `action`-key til at være 'delete', så ved jeg at den skal slettes og derfor logges ud.
-
+## booking
+Dette er funktionen jeg bruger til at sætte min reservation/booking inde i apiet/databasen, når man klikker på reserve. 
+jeg vil forklare mere om dette til selve prøven
 ```js
-export const AuthContext = createContext()
-
-export default function AuthProvider({ children }) {
-	const [authCookie, setAuthCookie] = useCookie('auth')
-	const [authSession, setAuthSession] = useSessionStorage('auth')
-	const [rememberMe, setRememberMe] = useState(false)
-
-	const [auth, setAuth] = useState({})
-
-	useEffectOnce(() => {
-		if (authCookie) {
-			setAuth(JSON.parse(authCookie))
-			setRememberMe(true)
-		} else if (authSession) {
-			setAuth(JSON.parse(authSession))
-		}
-	})
-
-	useEffect(() => {
-		if (auth.action === 'delete') {
-			if (rememberMe) {
-				setAuthCookie(null, { days: -1 })
-			} else {
-				setAuthSession(null)
-			}
-			setRememberMe(false)
-			return
-		}
-		if (Object.keys(auth).length > 0) {
-			if (rememberMe) {
-				setAuthCookie(JSON.stringify(auth), {
-					days: formatDateToDays(auth.validUntil),
-				})
-			} else {
-				setAuthSession(JSON.stringify(auth))
-			}
-		}
-	}, [auth])
-
-	return (
-		<AuthContext.Provider value={{ auth, setAuth }}>
-			<RememberMeContext.Provider value={{ rememberMe, setRememberMe }}>
-				{children}
-			</RememberMeContext.Provider>
-		</AuthContext.Provider>
-	)
-}
+<Formik
+          initialValues={{
+            table: "",
+            name: "",
+            email: "",
+            guests: "",
+            phone: "",
+            date: "",
+            textarea: "",
+           
+          }}
+          validationSchema={loginSchema}
+          onSubmit={(values, { setStatus, setSubmitting }) => {
+            fetch("http://localhost:4000/reservations", {
+              method: "POST",
+             headers:{
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`
+             },
+              body: JSON.stringify({
+                userId: userId, 
+                name:values.name,
+                email:values.email,
+                phone:values.phone,
+                guests:values.guests,
+                table:values.table,
+                date:values.date,
+                textarea:values.textarea
+              }),
+            })
+              .then((res) => {
+                if (!res.ok) {
+                  setStatus(res.json());
+                  setSubmitting(false);
+                } else {
+                  return res.json();
+                } 
+               
+              }) 
+               router.push("/takforbooking")
+          }}
 ```
