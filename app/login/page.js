@@ -62,7 +62,7 @@ const LoginPage = () => {
     >
     { ({status})   =>(
       <Form className=" flex flex-col mx-auto  p-10 w-[30rem] text-white gap-4">
-        <Field className="border p-3 border-white bg-transparent" name="email" type="email" />
+        <Field className="border p-3 border-white bg-transparent" name="email" type="email" placeholder="write your email" />
 
         <ErrorMessage name="email" component={"p"} className="text-red-400" />
 
@@ -70,6 +70,7 @@ const LoginPage = () => {
           className="border border-white bg-transparent p-3"
           name="password"
           type="password"
+          placeholder="type your password"
         />
 
         <ErrorMessage

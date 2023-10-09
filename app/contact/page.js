@@ -1,6 +1,7 @@
 "use client";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useRouter } from "next/navigation";
+
 import * as Yup from "yup";
 const ContactPage = () => {
   const router = useRouter();
@@ -42,7 +43,7 @@ const ContactPage = () => {
               return res.json();
             }
           })
-           router.push("/")  
+           router.push("/takforcontact")  
       }}
     >
     { ({status})   =>(

@@ -72,6 +72,7 @@ const RegisterPage = () => {
                 className="border p-3 border-white bg-transparent"
                 name="name"
                 type="text"
+                placeholder="write your name here"
               />
               <ErrorMessage
                 name="name"
@@ -82,18 +83,21 @@ const RegisterPage = () => {
                 className="border p-3 border-white bg-transparent"
                 name="email"
                 type="email"
+                placeholder="write your email"
               />
 
               <ErrorMessage
                 name="email"
                 component={"p"}
                 className="text-red-400"
+           
               />
 
               <Field
                 className="border p-3 border-white bg-transparent"
                 name="password"
                 type="password"
+                placeholder="type your password"
               />
               <ErrorMessage
                 name="password"
@@ -104,6 +108,7 @@ const RegisterPage = () => {
                 className="border p-3 border-white bg-transparent"
                 name="confirmPassword"
                 type="password"
+                placeholder="retype your password"
               />
               <ErrorMessage
                 name="confirmPassword"

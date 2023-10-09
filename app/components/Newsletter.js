@@ -44,7 +44,7 @@ const Subscribe = () => {
               sameSite: "lax",
               maxAge: 3600,
             });
-            router.push("/");
+            router.push("/takfortilmelding");
           });
       }}
     >
